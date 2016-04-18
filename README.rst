@@ -6,7 +6,7 @@ Installation
 
 Package is not present in any of known package archives.
 
-Installation procedure for Spacemacs users look the following
+Installation procedure for `Spacemacs <http://spacemacs.org>`_
 
 - Add package to the ``dotspacemacs-additional-packages``::
 
