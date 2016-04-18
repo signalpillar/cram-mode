@@ -3,7 +3,7 @@
 ;;; Copyright (C) 2016, by Volodymyr Vitvitskyi
 
 ;; Author: Volodymyr Vitvitskyi ( contact.volodymyr@gmail.com )
-;; Version: 2016.5.2
+;; Version: 2016.5.3
 ;; Created: 18 Apr 2016
 ;; Keywords: languages
 ;; Homepage: https://github.com/signalpillar/cram-mode
@@ -25,7 +25,7 @@
 ;;; Code:
 
 (setq cram-highlights
-      '(("^  [\\$>].*$" . font-lock-string-face)
+      '(("^  [\\$>] .*$" . font-lock-string-face)
         ("^  .*$" . font-lock-defaults)
         (".*" . font-lock-comment-face)))
 
