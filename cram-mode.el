@@ -19,13 +19,11 @@
 ;; Syntax highlight for cram file.
 ;; https://pypi.python.org/pypi/cram
 
-;; full doc on how to use here
-
-
 ;;; Code:
 
 (setq cram-highlights
       '(("^  [\\$>] .*$" . font-lock-string-face)
+        ("^.* \(\\(glob\\|re\\|no-eol\\|esc\\)\)$" . font-lock-keyword-face)
         ("^  .*$" . font-lock-defaults)
         (".*" . font-lock-comment-face)))
 

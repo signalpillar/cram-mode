@@ -1,4 +1,5 @@
-Simple major mode for the `cram <https://pypi.python.org/pypi/cram>`_ files. Major adds syntax highlighting.
+Simple major mode for the `cram <https://pypi.python.org/pypi/cram>`_ files.
+Mode adds syntax highlighting.
 ``cram-mode`` is automatically enabled for files with '.t' extension.
 
 Installation
