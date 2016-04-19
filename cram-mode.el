@@ -31,7 +31,7 @@
 
 (setq mode-name "cram")
 
-(define-derived-mode cram-mode fundamental-mode
+(define-derived-mode cram-mode text-mode
   (setq font-lock-defaults '(cram-highlights))
   (setq mode-name "cram"))
 
