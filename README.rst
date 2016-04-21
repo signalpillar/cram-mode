@@ -23,10 +23,10 @@ Key bindings
 
 ::
 
-  | Key binding | Command                  | Description                                                             |
-  |-------------+--------------------------+-------------------------------------------------------------------------|
-  | C-c C-b     | cram-run-buffer-in-debug | Run 'cram -d' command against current buffer.                           |
-  | C-c C-r     | cram-run-region-in-debug | Run 'cram -d' command against region and insert output below selection. |
+  | Key binding | Command                  | Description                                                     |
+  |-------------+--------------------------+-----------------------------------------------------------------|
+  | C-c C-b     | cram-run-buffer-in-debug | Run 'cram -d' against current buffer.                           |
+  | C-c C-r     | cram-run-region-in-debug | Run 'cram -d' against region and insert output below selection. |
 
 
 
