@@ -39,14 +39,14 @@
 (defun cram-run-buffer-in-debug ()
   "Run cram against a file in debug mode (-d)."
   (interactive)
-  (shell-command (cram-get-debug-cmdline (buffer-file-name))))
+  (compilation-start (cram-get-debug-cmdline (buffer-file-name)) t))
 
 (defun cram-run-region-in-debug (start end)
   "Run cram (in debug) against region and output insert below selection."
   (interactive "r")
   (let ((dest (make-temp-file mode-name)))
     (write-region start end dest)
-    (insert (shell-command-to-string (cram-get-debug-cmdline dest)) " \n"))) 
+    (insert (shell-command-to-string (cram-get-debug-cmdline dest)) " \n")))
 
 (define-derived-mode cram-mode text-mode
   (setq font-lock-defaults '(cram-highlights))

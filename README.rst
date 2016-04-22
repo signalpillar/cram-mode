@@ -3,6 +3,8 @@ Mode adds syntax highlighting and interactive commands to run cram against
 buffer or region.
 ``cram-mode`` is automatically enabled for files with '.t' extension.
 
+.. image:: asciicast.gif
+
 Installation
 ------------
 
@@ -27,10 +29,3 @@ Key bindings
   |-------------+--------------------------+-----------------------------------------------------------------|
   | C-c C-b     | cram-run-buffer-in-debug | Run 'cram -d' against current buffer.                           |
   | C-c C-r     | cram-run-region-in-debug | Run 'cram -d' against region and insert output below selection. |
-
-
-
-References
-----------
-
-* `How to Write a Emacs Major Mode for Syntax Coloring <http://ergoemacs.org/emacs/elisp_syntax_coloring.html>`_
