@@ -1,6 +1,9 @@
-Simple major mode for the `cram <https://pypi.python.org/pypi/cram>`_ files.
-Mode adds syntax highlighting.
+'cram-mode.el' provides a major mode for the `cram <https://pypi.python.org/pypi/cram>`_ files.
+Mode adds syntax highlighting and interactive commands to run cram against
+buffer or region.
 ``cram-mode`` is automatically enabled for files with '.t' extension.
+
+.. image:: asciicast.gif
 
 Installation
 ------------
@@ -17,8 +20,12 @@ Installation procedure for `Spacemacs <http://spacemacs.org>`_
 
 - Add ``(require 'cram-mode)`` in ``dotspacemacs/user-config`` body.
 
+Key bindings
+------------
 
-References
-----------
+::
 
-* `How to Write a Emacs Major Mode for Syntax Coloring <http://ergoemacs.org/emacs/elisp_syntax_coloring.html>`_
+  | Key binding | Command                  | Description                                                     |
+  |-------------+--------------------------+-----------------------------------------------------------------|
+  | C-c C-b     | cram-run-buffer-in-debug | Run 'cram -d' against current buffer.                           |
+  | C-c C-r     | cram-run-region-in-debug | Run 'cram -d' against region and insert output below selection. |
