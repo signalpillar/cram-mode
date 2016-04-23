@@ -21,17 +21,30 @@
 
 ;;; Code:
 
-(setq cram-highlights
+(defgroup cram nil
+  "cram-mode"
+  :prefix "cram-"
+  :group 'emacs)
+
+(defcustom cram-highlights
       '(("^  [\\$>] .*$" . font-lock-string-face)
         ("^.* \(\\(glob\\|re\\|no-eol\\|esc\\)\)$" . font-lock-keyword-face)
         ("^  .*$" . font-lock-defaults)
-        (".*" . font-lock-comment-face)))
+        (".*" . font-lock-comment-face))
+      "Cram mode syntax highlight"
+      :type '(alist :key-type (string :tag "Regexp")
+                    :value-type (symbol :tag "Font lock symbol"))
+      :group 'cram)
 
 (defcustom cram-executable "cram"
-  "cram executable path")
+  "Cram executable path"
+  :type 'string
+  :group 'cram)
 
 (defcustom cram-indent 2
-  "Number of spaces to use for indentation")
+  "Number of spaces to use for indentation"
+  :type 'integer
+  :group 'cram)
 
 (defun cram-get-debug-cmdline (fname)
   (format "%s -d %s" cram-executable fname))
