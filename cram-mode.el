@@ -59,7 +59,15 @@
   (interactive "r")
   (let ((dest (make-temp-file mode-name)))
     (write-region start end dest)
-    (insert (shell-command-to-string (cram-get-debug-cmdline dest)) " \n")))
+    (let ((text (shell-command-to-string (cram-get-debug-cmdline dest)))
+          (indent (make-string cram-indent 32)))
+      ;; strip last new line
+      (setq text (replace-regexp-in-string "\n\\'" "" text))
+      (save-excursion
+        ;; support selecting bottom to top
+        (goto-char (region-end))
+        ;; insert indented text
+        (insert indent (replace-regexp-in-string "\\(\n\\)" (concat "\n" indent) text))))))
 
 (define-derived-mode cram-mode text-mode
   (setq font-lock-defaults '(cram-highlights))
